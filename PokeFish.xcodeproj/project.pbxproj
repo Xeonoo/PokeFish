@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		290D2F0B2876E54B00692C47 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290D2F0A2876E54B00692C47 /* Login.swift */; };
+		290D2F0D2876E75B00692C47 /* menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290D2F0C2876E75B00692C47 /* menu.swift */; };
+		290D2F0F2876E7D400692C47 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290D2F0E2876E7D400692C47 /* Register.swift */; };
+		290D2F112876EB0100692C47 /* PokeFish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290D2F102876EB0100692C47 /* PokeFish.swift */; };
 		296108F32875B758002FC736 /* PokeFishApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296108F22875B758002FC736 /* PokeFishApp.swift */; };
 		296108F52875B758002FC736 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296108F42875B758002FC736 /* ContentView.swift */; };
 		296108F72875B759002FC736 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 296108F62875B759002FC736 /* Assets.xcassets */; };
@@ -34,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		290D2F0A2876E54B00692C47 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		290D2F0C2876E75B00692C47 /* menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menu.swift; sourceTree = "<group>"; };
+		290D2F0E2876E7D400692C47 /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
+		290D2F102876EB0100692C47 /* PokeFish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeFish.swift; sourceTree = "<group>"; };
 		296108EF2875B758002FC736 /* PokeFish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeFish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		296108F22875B758002FC736 /* PokeFishApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeFishApp.swift; sourceTree = "<group>"; };
 		296108F42875B758002FC736 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -96,6 +104,10 @@
 			children = (
 				296108F22875B758002FC736 /* PokeFishApp.swift */,
 				296108F42875B758002FC736 /* ContentView.swift */,
+				290D2F102876EB0100692C47 /* PokeFish.swift */,
+				290D2F0C2876E75B00692C47 /* menu.swift */,
+				290D2F0A2876E54B00692C47 /* Login.swift */,
+				290D2F0E2876E7D400692C47 /* Register.swift */,
 				296108F62875B759002FC736 /* Assets.xcassets */,
 				296108F82875B759002FC736 /* Preview Content */,
 			);
@@ -257,8 +269,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				290D2F0B2876E54B00692C47 /* Login.swift in Sources */,
 				296108F52875B758002FC736 /* ContentView.swift in Sources */,
+				290D2F0D2876E75B00692C47 /* menu.swift in Sources */,
 				296108F32875B758002FC736 /* PokeFishApp.swift in Sources */,
+				290D2F112876EB0100692C47 /* PokeFish.swift in Sources */,
+				290D2F0F2876E7D400692C47 /* Register.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
