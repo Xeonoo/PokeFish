@@ -11,19 +11,16 @@ struct menu: View {
     var body: some View {
         //        Menu
                 ZStack {
+                    NavigationView{
                     VStack {
                         Spacer()
-                        Button {
-                            
-                        } label: {
-                            Text("PokeFish")
-                        }
+                        NavigationLink(destination: PokeFish()) {
+                                Text("Poke Fish")
+                             }
                         Spacer()
-                        Button {
-                            
-                        } label: {
-                            Text("Options")
-                        }
+                        NavigationLink(destination: PokeFish()) {
+                                Text("Options")
+                            }
                         Spacer()
                         Button {
                             
@@ -31,6 +28,7 @@ struct menu: View {
                             Text("Logut")
                         }
                         Spacer()
+                        }
                     }
                 }
     }

@@ -9,13 +9,7 @@ import SwiftUI
 
 struct Register: View {
     var body: some View {
-        NavigationView {
-            VStack {
-                NavigationLink(destination: menu()) {
-                        Text("login")
-                    }
-    }
-}
+        Text("sdf")
     }
 }
 
