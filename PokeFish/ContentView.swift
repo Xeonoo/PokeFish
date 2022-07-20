@@ -58,9 +58,13 @@ struct ContentView: View {
                     NavigationLink(destination: Text("logged@\(username)"), isActive: $showingLoginScreen) {
                         EmptyView()
                     }
+                    NavigationLink(destination: ContentViewregister()) {
+                        Text("Create Account")
+                            .padding(.top)
+                            .foregroundColor(.black)
+                    }
                 }
             }
-            
             .navigationBarHidden(true)
         }
     }
@@ -78,49 +82,74 @@ struct ContentView: View {
         }
     }
 }
-        
-//                 register
-                    /*NavigationLink(destination: Register()) {
-                            Text("register")
-                        }*/
+         
            
 
-//        About fish
-     /*   ZStack {
-            VStack {
-                HStack {
-                    Spacer()
-                    Text("Date")
-                    Spacer()
-                    Text("Lenght")
-                    Spacer()
-                    Text("Weight")
-                    Spacer()
-                }
-                HStack {
-                    Spacer()
-                    Text("25 maj 2000")
-                    Spacer()
-                    Text("2.5m")
-                    Spacer()
-                    Text("10Kg")
-                    Spacer()
-                }
-                .padding(.top, 5.0)
-                Spacer()
-            }
-        }
-        
-        
-        
-        
-        
-        
-        
-        */
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
 }
 
+struct Location {
+    static let allLocations = [
+        "New York",
+        "London",
+        "Tokyo",
+        "Berlin",
+        "Olongapo",
+        "Paris"
+    ]
+}
+
+struct ContentViewregister : View {
+     
+    @State private var firstname = ""
+    @State private var lastname = ""
+    @State private var location = ""
+    @State private var termsAccepted = false
+    @State private var age = 20
+ 
+    var body: some View {
+        NavigationView {
+            Form {
+                Section(header: Text("Register")) {
+                    TextField("Firstname",
+                              text: $firstname)
+                    TextField("Lastname",
+                              text: $lastname)
+                    Picker(selection: $location,
+                           label: Text("Location")) {
+                            ForEach(Location.allLocations, id: \.self) { location in
+                                Text(location).tag(location)
+                            }
+                    }
+                     
+                    Toggle(isOn: $termsAccepted,
+                           label: {
+                            Text("Accept terms and conditions")
+                    })
+                     
+                    Stepper(value: $age,
+                            in: 18...100,
+                            label: {
+                        Text("Current age: \(self.age)")
+                    })
+                     
+                    Button(action: {}) {
+                        Text("Register")
+                            .font(.headline)
+                            .foregroundColor(.white)
+                            .padding()
+                            .frame(width: 220, height: 60)
+                            .background(Color.green)
+                            .cornerRadius(15.0)
+                            .shadow(radius: 5)
+                            .border(Color.red, width: 4)
+                    }
+                    .padding()
+                }
+            }.navigationBarTitle(Text("Register"))
+        }
+    }
+}
