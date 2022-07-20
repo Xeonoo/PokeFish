@@ -37,4 +37,14 @@ class DataManager: ObservableObject {
             }
         }
     }
+    
+    func addFish(fishName: String) {
+        let db = Firestore.firestore()
+        let ref = db.collection("Fishes").document(fishName)
+        ref.setData(["name": fishName, "id": 10]) { error in
+            if let error = error {
+                print(error.localizedDescription)
+            }
+        }
+    }
 }

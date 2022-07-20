@@ -24,7 +24,7 @@ struct ContentView: View {
             ListView()
         } else {
             content 
-        } 
+        }  
     }
     
     var content: some View {

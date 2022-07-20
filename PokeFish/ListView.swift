@@ -8,22 +8,25 @@
 import SwiftUI
 
 struct ListView: View {
-    
-    @EnvironmentObject var DataManager: DataManager
+    @EnvironmentObject var dataManager: DataManager
+    @State private var showPopup = false
     
     var body: some View {
         NavigationView {
-            List(DataManager.fishes, id: \.id ) { fish in
+            List(dataManager.fishes, id: \.id ) { fish in
                 Text(fish.name)
             }
             .navigationTitle("Fishes")
             .navigationBarItems(trailing: Button(action: {
-                                //add
+                showPopup.toggle()
                 
             },
             label:{
             Image(systemName: "plus")
             }))
+            .sheet(isPresented: $showPopup) {
+                    NewFishView()
+            }
         }
     }
 }
@@ -31,5 +34,6 @@ struct ListView: View {
 struct ListView_Previews: PreviewProvider {
     static var previews: some View {
         ListView()
+            .environmentObject(DataManager())
     }
 }
