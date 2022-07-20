@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2920D75828882EC300F95CDA /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 2920D75728882EC300F95CDA /* FirebaseAuth */; };
+		2920D75A28882EC300F95CDA /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 2920D75928882EC300F95CDA /* FirebaseFirestore */; };
+		2920D75C28882FC600F95CDA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2920D75B28882FC600F95CDA /* GoogleService-Info.plist */; };
+		2920D75E28883BFC00F95CDA /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2920D75D28883BFC00F95CDA /* ListView.swift */; };
+		2920D76228883D3900F95CDA /* Fish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2920D76128883D3900F95CDA /* Fish.swift */; };
+		2920D76428883E5100F95CDA /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2920D76328883E5100F95CDA /* DataManager.swift */; };
 		296108F32875B758002FC736 /* PokeFishApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296108F22875B758002FC736 /* PokeFishApp.swift */; };
 		296108F52875B758002FC736 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296108F42875B758002FC736 /* ContentView.swift */; };
 		296108F72875B759002FC736 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 296108F62875B759002FC736 /* Assets.xcassets */; };
@@ -34,6 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2920D75B28882FC600F95CDA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2920D75D28883BFC00F95CDA /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		2920D76128883D3900F95CDA /* Fish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fish.swift; sourceTree = "<group>"; };
+		2920D76328883E5100F95CDA /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		296108EF2875B758002FC736 /* PokeFish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeFish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		296108F22875B758002FC736 /* PokeFishApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeFishApp.swift; sourceTree = "<group>"; };
 		296108F42875B758002FC736 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -51,6 +61,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2920D75828882EC300F95CDA /* FirebaseAuth in Frameworks */,
+				2920D75A28882EC300F95CDA /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,9 +106,13 @@
 		296108F12875B758002FC736 /* PokeFish */ = {
 			isa = PBXGroup;
 			children = (
+				2920D76328883E5100F95CDA /* DataManager.swift */,
+				2920D76128883D3900F95CDA /* Fish.swift */,
+				2920D75D28883BFC00F95CDA /* ListView.swift */,
 				296108F22875B758002FC736 /* PokeFishApp.swift */,
 				296108F42875B758002FC736 /* ContentView.swift */,
 				296108F62875B759002FC736 /* Assets.xcassets */,
+				2920D75B28882FC600F95CDA /* GoogleService-Info.plist */,
 				296108F82875B759002FC736 /* Preview Content */,
 			);
 			path = PokeFish;
@@ -143,6 +159,10 @@
 			dependencies = (
 			);
 			name = PokeFish;
+			packageProductDependencies = (
+				2920D75728882EC300F95CDA /* FirebaseAuth */,
+				2920D75928882EC300F95CDA /* FirebaseFirestore */,
+			);
 			productName = PokeFish;
 			productReference = 296108EF2875B758002FC736 /* PokeFish.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +235,9 @@
 				Base,
 			);
 			mainGroup = 296108E62875B758002FC736;
+			packageReferences = (
+				2920D75628882EC300F95CDA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 296108F02875B758002FC736 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -233,6 +256,7 @@
 			files = (
 				296108FA2875B759002FC736 /* Preview Assets.xcassets in Resources */,
 				296108F72875B759002FC736 /* Assets.xcassets in Resources */,
+				2920D75C28882FC600F95CDA /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,7 +282,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				296108F52875B758002FC736 /* ContentView.swift in Sources */,
+				2920D76428883E5100F95CDA /* DataManager.swift in Sources */,
 				296108F32875B758002FC736 /* PokeFishApp.swift in Sources */,
+				2920D75E28883BFC00F95CDA /* ListView.swift in Sources */,
+				2920D76228883D3900F95CDA /* Fish.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -577,6 +604,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2920D75628882EC300F95CDA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2920D75728882EC300F95CDA /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2920D75628882EC300F95CDA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		2920D75928882EC300F95CDA /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2920D75628882EC300F95CDA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 296108E72875B758002FC736 /* Project object */;
 }
