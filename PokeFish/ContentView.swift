@@ -22,7 +22,7 @@ struct ContentView: View {
         
         
         if userIsLoggedIn {
-            ListView()
+            NavigationMenu()
         } else {
             content
         }
