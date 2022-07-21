@@ -15,16 +15,18 @@ struct ContentView: View {
     @State private var wrongemail = 0
     @State private var wrongPassword = 0
     @State private var userIsLoggedIn = false
-//    @State private var showingLoginScreen = false
-    
+   
     
     
     var body: some View {
+        
+        
         if userIsLoggedIn {
             ListView()
         } else {
-            content 
-        }  
+            content
+        }
+        
     }
     
     var content: some View {
@@ -65,10 +67,6 @@ struct ContentView: View {
                     .frame(width: 300, height: 50)
                     .background(Color.green)
                     .cornerRadius(10)
-//
-//                    NavigationLink(destination: Text("logged@\(email)"), isActive: $showingLoginScreen) {
-//                        EmptyView()
-//                    }
                     NavigationLink(destination: ContentViewregister()) {
                         Text("Create Account")
                             .padding(.top)
@@ -87,21 +85,6 @@ struct ContentView: View {
         }
     }
     
-//
-//    func autheticateUser(email: String, password: String) {
-//        if email.lowercased() == "xeon" {
-//             wrongemail = 0
-//            if password.lowercased() == "abc" {
-//                wrongPassword = 0
-//                showingLoginScreen = true
-//            } else {
-//                wrongPassword = 2
-//            }
-//        } else {
-//            wrongemail = 2
-//        }
-//    }
-    
     func login() {
         Auth.auth().signIn(withEmail: email, password: password) {
             result, error in if error != nil {
@@ -112,24 +95,11 @@ struct ContentView: View {
     
 }
          
-           
-
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
 }
-
-//struct Location {
-//    static let allLocations = [
-//        "New York",
-//        "London",
-//        "Tokyo",
-//        "Berlin",
-//        "Olongapo",
-//        "Paris"
-//    ]
-//}
 
 struct ContentViewregister : View {
     
@@ -175,63 +145,8 @@ struct ContentViewregister : View {
                 .frame(width: 300, height: 50)
                 .background(Color.green)
                 .cornerRadius(10)
-                
-//                NavigationLink(destination: Text("logged@\(email)"), isActive: $showingLoginScreen) {
-//                    EmptyView()
-//                }
-    }
-    
-    /*
-    @State private var firstname = ""
-    @State private var lastname = ""
-    @State private var location = ""
-    @State private var termsAccepted = false
-    @State private var age = 20
- 
-    var body: some View {
-        NavigationView {
-            Form {
-                Section(header: Text("Register")) {
-                    TextField("Firstname",
-                              text: $firstname)
-                    TextField("Lastname",
-                              text: $lastname)
-                    Picker(selection: $location,
-                           label: Text("Location")) {
-                            ForEach(Location.allLocations, id: \.self) { location in
-                                Text(location).tag(location)
-                            }
-                    }
-                     
-                    Toggle(isOn: $termsAccepted,
-                           label: {
-                            Text("Accept terms and conditions")
-                    })
-                     
-                    Stepper(value: $age,
-                            in: 18...100,
-                            label: {
-                        Text("Current age: \(self.age)")
-                    })
-                     
-                    Button(action: {}) {
-                        Text("Register")
-                            .font(.headline)
-                            .foregroundColor(.white)
-                            .padding()
-                            .frame(width: 220, height: 60)
-                            .background(Color.green)
-                            .cornerRadius(15.0)
-                            .shadow(radius: 5)
-                            .border(Color.red, width: 4)
-                    }
-                    .padding()
-                }
-            }.navigationBarTitle(Text("Register"))
-        }
-    }
-    */
-        }
+            }
+        }.navigationBarHidden(true)
     }
     
     func register() {

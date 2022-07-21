@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct ListView: View {
     @EnvironmentObject var dataManager: DataManager
@@ -13,19 +14,37 @@ struct ListView: View {
     
     var body: some View {
         NavigationView {
-            List(dataManager.fishes, id: \.id ) { fish in
-                Text(fish.name)
-            }
-            .navigationTitle("Fishes")
-            .navigationBarItems(trailing: Button(action: {
-                showPopup.toggle()
-                
-            },
-            label:{
-            Image(systemName: "plus")
-            }))
-            .sheet(isPresented: $showPopup) {
-                    NewFishView()
+            VStack {
+                List(dataManager.fishes, id: \.id ) { fish in
+                    Text(fish.name)
+                }
+                .navigationTitle("Fishes")
+                .navigationBarItems(trailing: Button(action: {
+                    showPopup.toggle()
+
+                },
+                label:{
+                Image(systemName: "plus")
+                }))
+                .sheet(isPresented: $showPopup) {
+                        NewFishView()
+                }
+                NavigationLink(destination: ContentView()
+                    .navigationBarTitle(Text("x"))
+                    .navigationBarHidden(true))
+                {
+                    Text("Logut")
+                    Image(systemName: "xmark")
+                }
+                Button {
+                    do {
+                    try Auth.auth().signOut()
+                    } catch let signOutError as NSError {
+                    print("Error signing out: %@", signOutError)
+                    }
+                } label: {
+                    Text("Out")
+                }
             }
         }
     }
