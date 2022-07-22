@@ -21,8 +21,7 @@
 		296109042875B759002FC736 /* PokeFishTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296109032875B759002FC736 /* PokeFishTests.swift */; };
 		2961090E2875B759002FC736 /* PokeFishUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2961090D2875B759002FC736 /* PokeFishUITests.swift */; };
 		296109102875B759002FC736 /* PokeFishUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2961090F2875B759002FC736 /* PokeFishUITestsLaunchTests.swift */; };
-		299A9D7E2889CD490033092E /* NavigationMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299A9D7D2889CD490033092E /* NavigationMenu.swift */; };
-		299A9D802889D57E0033092E /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299A9D7F2889D57E0033092E /* Person.swift */; };
+		297EB77F288AAF69002F7053 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297EB77E288AAF69002F7053 /* MenuView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,8 +57,7 @@
 		296109092875B759002FC736 /* PokeFishUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokeFishUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2961090D2875B759002FC736 /* PokeFishUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeFishUITests.swift; sourceTree = "<group>"; };
 		2961090F2875B759002FC736 /* PokeFishUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeFishUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		299A9D7D2889CD490033092E /* NavigationMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationMenu.swift; sourceTree = "<group>"; };
-		299A9D7F2889D57E0033092E /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		297EB77E288AAF69002F7053 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,8 +110,7 @@
 		296108F12875B758002FC736 /* PokeFish */ = {
 			isa = PBXGroup;
 			children = (
-				299A9D7F2889D57E0033092E /* Person.swift */,
-				299A9D7D2889CD490033092E /* NavigationMenu.swift */,
+				297EB77E288AAF69002F7053 /* MenuView.swift */,
 				296108F42875B758002FC736 /* ContentView.swift */,
 				296108F22875B758002FC736 /* PokeFishApp.swift */,
 				2920D76328883E5100F95CDA /* DataManager.swift */,
@@ -290,13 +287,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				299A9D7E2889CD490033092E /* NavigationMenu.swift in Sources */,
+				297EB77F288AAF69002F7053 /* MenuView.swift in Sources */,
 				296108F52875B758002FC736 /* ContentView.swift in Sources */,
 				2920D7662888690800F95CDA /* NewFishView.swift in Sources */,
 				2920D76428883E5100F95CDA /* DataManager.swift in Sources */,
 				296108F32875B758002FC736 /* PokeFishApp.swift in Sources */,
 				2920D75E28883BFC00F95CDA /* ListView.swift in Sources */,
-				299A9D802889D57E0033092E /* Person.swift in Sources */,
 				2920D76228883D3900F95CDA /* Fish.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
