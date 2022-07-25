@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct MenuItem: Identifiable {
     var id = UUID()
@@ -87,10 +88,12 @@ struct MenuView: View {
     @State var menuOpened = false
     
     var body: some View {
+        NavigationView {
         ZStack {
+            VStack {
             if !menuOpened {
                 Button {
-                    // ad
+                    // add
                     self.menuOpened.toggle()
                 } label: {
                     Text("asd")
@@ -99,10 +102,23 @@ struct MenuView: View {
                         .frame(width: 200, height: 50, alignment: .center)
                         .background(Color(.systemGreen))
                 }
+                .padding(.top, 340.0)
             }
+                NavigationLink(destination: ListView()
+                    .navigationBarHidden(true))
+                {
+                    Text("Fish")
+                        .bold()
+                        .foregroundColor(Color.white)
+                        .frame(width: 200, height: 50, alignment: .center)
+                        .background(Color(.systemGreen))
+                }
+                .padding(.top, 30.0)
             SideMenu(width: UIScreen.main.bounds.width/1.6, menuOpened: menuOpened, toggleMenu: toggleMenu)
         }
         .edgesIgnoringSafeArea(.all)
+    }
+    }
     }
     func toggleMenu() {
         menuOpened.toggle()
