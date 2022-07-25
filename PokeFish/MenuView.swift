@@ -34,7 +34,7 @@ struct MenuContent: View {
                         Image(systemName: item.imageName)
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-                            .foregroundColor(Color.white)
+                            .foregroundColor(Color.green)
                             .frame(width: 30, height: 30, alignment: .center)
                         Text(item.text)
                             .bold()
@@ -66,7 +66,7 @@ struct SideMenu: View {
             GeometryReader { _ in
                 EmptyView()
             }
-            .background(Color.gray.opacity(0.15))
+            .background(Color.green.opacity(0.15))
             .opacity(self.menuOpened ? 1 : 0)
             .animation(Animation.easeIn.delay(0.15), value: 0.1)
             .onTapGesture {
@@ -89,22 +89,23 @@ struct MenuView: View {
     
     var body: some View {
         NavigationView {
-        ZStack {
+        VStack {
             VStack {
             if !menuOpened {
                 Button {
                     // add
                     self.menuOpened.toggle()
                 } label: {
-                    Text("asd")
+                    Text("Menu")
                         .bold()
                         .foregroundColor(Color.white)
                         .frame(width: 200, height: 50, alignment: .center)
                         .background(Color(.systemGreen))
                 }
-                .padding(.top, 340.0)
+                .padding(.top, 370.0)
             }
                 NavigationLink(destination: ListView()
+                    .navigationBarTitle(Text("x"))
                     .navigationBarHidden(true))
                 {
                     Text("Fish")
@@ -114,9 +115,10 @@ struct MenuView: View {
                         .background(Color(.systemGreen))
                 }
                 .padding(.top, 30.0)
-            SideMenu(width: UIScreen.main.bounds.width/1.6, menuOpened: menuOpened, toggleMenu: toggleMenu)
+                SideMenu(width: UIScreen.main.bounds.width/2.4, menuOpened: menuOpened, toggleMenu: toggleMenu)
         }
         .edgesIgnoringSafeArea(.all)
+        .background(Color.green.opacity(0.15))
     }
     }
     }
@@ -128,6 +130,6 @@ struct MenuView: View {
 struct MenuView_Previews: PreviewProvider {
     static var previews: some View {
         MenuView()
-            .preferredColorScheme(.dark)
+            .preferredColorScheme(.light)
     }
 }

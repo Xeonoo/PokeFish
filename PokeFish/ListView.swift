@@ -17,20 +17,26 @@ struct ListView: View {
         
         NavigationView {
             VStack {
+                
                 List(dataManager.fishes, id: \.id ) { fish in
                     Text(fish.name)
                 }
+                
                 .navigationTitle("Fishes")
+                
                 .navigationBarItems(trailing: Button(action: {
                     showPopup.toggle()
 
                 },
                 label:{
                 Image(systemName: "plus")
+                        .foregroundColor(.green)
+                        .frame(width: 50, height: 50)
                 }))
                 .sheet(isPresented: $showPopup) {
                         NewFishView()
                 }
+                
                 HStack {
                     NavigationLink(destination: ContentView()
                         .navigationBarTitle(Text("x"))
@@ -39,6 +45,10 @@ struct ListView: View {
                         Text("Logut")
                         Image(systemName: "xmark")
                     }
+                    .foregroundColor(.white)
+                    .frame(width: 100, height: 50)
+                    .background(Color.green)
+                    .cornerRadius(10)
                     Button {
                         do {
                         try Auth.auth().signOut()
@@ -48,8 +58,13 @@ struct ListView: View {
                     } label: {
                         Text("Out")
                     }
+                    .foregroundColor(.white)
+                    .frame(width: 100, height: 50)
+                    .background(Color.green)
+                    .cornerRadius(10)
                 }
             }
+            
         }
     }
 }
