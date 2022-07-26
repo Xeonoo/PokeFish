@@ -38,48 +38,42 @@ struct ListView: View {
                 }
                 
                 HStack {
-                    NavigationLink(destination: ContentView()
-                        .navigationBarTitle(Text("x"))
-                        .navigationBarHidden(true))
-                    {
-                        Text("Logut")
-                        Image(systemName: "xmark")
-                    }
-                    .foregroundColor(.white)
-                    .frame(width: 100, height: 50)
-                    .background(Color.green)
-                    .cornerRadius(10)
-                    Button {
-                        do {
-                        try Auth.auth().signOut()
-                        } catch let signOutError as NSError {
-                        print("Error signing out: %@", signOutError)
-                        }
-                        
-                    } label: {
-                        Text("Out")
-                    }
-                    .foregroundColor(.white)
-                    .frame(width: 100, height: 50)
-                    .background(Color.green)
-                    .cornerRadius(10)
-                    
-//                    Button {
-//                        do {
-//                        try? Auth.auth().signOut()
-//                        } catch let signOutError as NSError {
-//                        print("Error signing out: %@", signOutError)
-//                        }
-//                            .cancel()
-//                        }
-//
-//                    label: {
+//                    NavigationLink(destination: ContentView()
+//                        .navigationBarTitle(Text("x"))
+//                        .navigationBarHidden(true))
+//                    {
+//                        Text("Logut")
 //                        Image(systemName: "xmark")
 //                    }
 //                    .foregroundColor(.white)
 //                    .frame(width: 100, height: 50)
 //                    .background(Color.green)
 //                    .cornerRadius(10)
+//                    Button {
+//                        do {
+//                        try Auth.auth().signOut()
+//                        } catch let signOutError as NSError {
+//                        print("Error signing out: %@", signOutError)
+//                        }
+//
+//                    } label: {
+//                        Text("Out")
+//                    }
+//                    .foregroundColor(.white)
+//                    .frame(width: 100, height: 50)
+//                    .background(Color.green)
+//                    .cornerRadius(10)
+                    NavigationLink(destination: MenuView()
+                        .navigationBarTitle(Text("x"))
+                        .navigationBarHidden(true))
+                    {
+                        Text("Menu")
+                        Image(systemName: "house")
+                    }
+                    .foregroundColor(.white)
+                    .frame(width: 100, height: 50)
+                    .background(Color.green)
+                    .cornerRadius(10)
                 }
             }
             

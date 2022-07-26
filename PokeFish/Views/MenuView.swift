@@ -42,9 +42,6 @@ struct MenuContent: View {
                             .font(.system(size: 22))
                             .multilineTextAlignment(.leading)
                             .foregroundColor(Color.white)
-                            .onTapGesture {
-                                isTapped.toggle()
-                            }
                         Spacer()
                     }
                     .padding()
@@ -81,11 +78,10 @@ struct MenuContent: View {
                 .frame(width: 100, height: 50)
                 .background(Color.green)
                 .cornerRadius(10)
+                
             }
             .padding(.bottom, 20)
         }
-            NavigationLink("", destination: testView(),
-            isActive: $isTapped)
         }
     }
 }
@@ -125,19 +121,21 @@ struct MenuView: View {
         NavigationView {
         VStack {
             VStack {
-            if !menuOpened {
-                Button {
-                    // add
-                    self.menuOpened.toggle()
-                } label: {
-                    Text("Menu")
-                        .bold()
-                        .foregroundColor(Color.white)
-                        .frame(width: 200, height: 50, alignment: .center)
-                        .background(Color(.systemGreen))
-                }
-                .padding(.top, 370.0)
-            }
+                
+//            if !menuOpened {
+//                Button {
+//                    // add
+//                    self.menuOpened.toggle()
+//                } label: {
+//                    Text("Menu")
+//                        .bold()
+//                        .foregroundColor(Color.white)
+//                        .frame(width: 200, height: 50, alignment: .center)
+//                        .background(Color(.systemGreen))
+//                        .cornerRadius(10)
+//                }
+//                .padding(.top, 370.0)
+//            }
                 if !menuOpened {
                 NavigationLink(destination: ListView()
                     .navigationBarTitle(Text("x"))
@@ -148,8 +146,42 @@ struct MenuView: View {
                         .foregroundColor(Color.white)
                         .frame(width: 200, height: 50, alignment: .center)
                         .background(Color(.systemGreen))
+                        .cornerRadius(10)
                 }
-                .padding(.top, 30.0)
+//                .padding(.top, 30.0)
+                .padding(.top, 370.0)
+                }
+                HStack {
+                    if !menuOpened {
+                        Button {
+                            do {
+                            try Auth.auth().signOut()
+                            } catch let signOutError as NSError {
+                            print("Error signing out: %@", signOutError)
+                            }
+                            
+                        } label: {
+                            Text("Log out")
+                        }
+                        .foregroundColor(.white)
+                        .frame(width: 100, height: 50)
+                        .background(Color.green)
+                        .cornerRadius(10)
+                    .padding(.top, 30.0)
+                    }
+                    if !menuOpened {
+                    NavigationLink(destination: ContentView()
+                        .navigationBarTitle(Text("x"))
+                        .navigationBarHidden(true))
+                    {
+                        Image(systemName: "gobackward")
+                            .foregroundColor(Color.white)
+                            .frame(width: 100, height: 50, alignment: .center)
+                            .background(Color(.systemGreen))
+                            .cornerRadius(10)
+                    }
+                    .padding(.top, 30.0)
+                    }
                 }
                 SideMenu(width: UIScreen.main.bounds.width/2.4, menuOpened: menuOpened, toggleMenu: toggleMenu)
         }
