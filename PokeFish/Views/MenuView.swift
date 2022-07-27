@@ -137,6 +137,21 @@ struct MenuView: View {
 //                .padding(.top, 370.0)
 //            }
                 if !menuOpened {
+                NavigationLink(destination: WeatherView()
+                    .navigationBarTitle(Text("x"))
+                    .navigationBarHidden(true))
+                {
+                    Text("Weather")
+                        .bold()
+                        .foregroundColor(Color.white)
+                        .frame(width: 200, height: 50, alignment: .center)
+                        .background(Color(.systemGreen))
+                        .cornerRadius(10)
+                }
+//                .padding(.top, 30.0)
+                .padding(.top, 370.0)
+                }
+                if !menuOpened {
                 NavigationLink(destination: ListView()
                     .navigationBarTitle(Text("x"))
                     .navigationBarHidden(true))
@@ -148,8 +163,8 @@ struct MenuView: View {
                         .background(Color(.systemGreen))
                         .cornerRadius(10)
                 }
-//                .padding(.top, 30.0)
-                .padding(.top, 370.0)
+                .padding(.top, 30.0)
+//                .padding(.top, 370.0)
                 }
                 HStack {
                     if !menuOpened {

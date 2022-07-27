@@ -22,6 +22,8 @@
 		2961090E2875B759002FC736 /* PokeFishUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2961090D2875B759002FC736 /* PokeFishUITests.swift */; };
 		296109102875B759002FC736 /* PokeFishUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2961090F2875B759002FC736 /* PokeFishUITestsLaunchTests.swift */; };
 		297EB77F288AAF69002F7053 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297EB77E288AAF69002F7053 /* MenuView.swift */; };
+		298E24E02891B0310085D3CA /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298E24DF2891B0310085D3CA /* WeatherView.swift */; };
+		298E24E52891B5830085D3CA /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298E24E42891B5830085D3CA /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		2961090D2875B759002FC736 /* PokeFishUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeFishUITests.swift; sourceTree = "<group>"; };
 		2961090F2875B759002FC736 /* PokeFishUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeFishUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		297EB77E288AAF69002F7053 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		298E24DF2891B0310085D3CA /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
+		298E24E42891B5830085D3CA /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,7 @@
 				2920D76328883E5100F95CDA /* DataManager.swift */,
 				298E24DD28903CBF0085D3CA /* Views */,
 				298E24DE28903CFA0085D3CA /* Models */,
+				298E24E12891B46D0085D3CA /* Managers */,
 				296108F62875B759002FC736 /* Assets.xcassets */,
 				2920D75B28882FC600F95CDA /* GoogleService-Info.plist */,
 				296108F82875B759002FC736 /* Preview Content */,
@@ -153,6 +158,7 @@
 				2920D75D28883BFC00F95CDA /* ListView.swift */,
 				296108F42875B758002FC736 /* ContentView.swift */,
 				297EB77E288AAF69002F7053 /* MenuView.swift */,
+				298E24DF2891B0310085D3CA /* WeatherView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -163,6 +169,14 @@
 				2920D76128883D3900F95CDA /* Fish.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		298E24E12891B46D0085D3CA /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				298E24E42891B5830085D3CA /* LocationManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,6 +324,8 @@
 				296108F32875B758002FC736 /* PokeFishApp.swift in Sources */,
 				2920D75E28883BFC00F95CDA /* ListView.swift in Sources */,
 				2920D76228883D3900F95CDA /* Fish.swift in Sources */,
+				298E24E02891B0310085D3CA /* WeatherView.swift in Sources */,
+				298E24E52891B5830085D3CA /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
