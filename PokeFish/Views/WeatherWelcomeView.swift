@@ -18,6 +18,7 @@ struct WeatherWelcomeView: View {
             .foregroundColor(Color.white)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color.green)
     }
 }
 

@@ -8,13 +8,29 @@
 import SwiftUI
 
 struct WeatherView: View {
-    @StateObject var locationManager = LocationManager() 
+    @StateObject var locationManager = LocationManager()
+    var weatherManager = WeatherManager()
+    @State var weather: ResponseBody?
+    
+    
     var body: some View {
         NavigationView {
             VStack {
                 HStack {
                     if let location = locationManager.location {
-                        Text("Your cordinates are:\(location.longitude),\(location.latitude)")
+                        if let weather = weather {
+//                            Text("Your cordinates are:\(location.longitude),\(location.latitude)")
+                            Text("Dziala")
+                        } else {
+                            LoadingView()
+                                .task {
+                                    do {
+                                        weather =    try await weatherManager.getCurrentWeather(latitude: location.latitude, longitude: location.longitude)
+                                    } catch {
+                                         print("error getting: \(error ) ")
+                                    }
+                                }
+                        }
                     } else {
                             if locationManager.isLoading {
                                 LoadingView()
