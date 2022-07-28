@@ -161,39 +161,49 @@ struct MenuView: View {
                         .foregroundColor(Color.white)
                         .frame(width: 200, height: 50, alignment: .center)
                         .background(Color(.systemGreen))
-                        .cornerRadius(10)
+                        .cornerRadius(30)
                 }
                 .padding(.top, 30.0)
 //                .padding(.top, 370.0)
                 }
                 HStack {
+//                    if !menuOpened {
+//                        Button {
+//                            do {
+//                            try Auth.auth().signOut()
+//                            } catch let signOutError as NSError {
+//                            print("Error signing out: %@", signOutError)
+//                            }
+//
+//                        } label: {
+//                            Text("Log out")
+//                        }
+//                        .foregroundColor(.white)
+//                        .frame(width: 100, height: 50)
+//                        .background(Color.green)
+//                        .cornerRadius(30)
+//                    .padding(.top, 30.0)
+//                    }
                     if !menuOpened {
-                        Button {
+                    NavigationLink(destination: ContentView()
+                        .task({
                             do {
                             try Auth.auth().signOut()
                             } catch let signOutError as NSError {
                             print("Error signing out: %@", signOutError)
                             }
-                            
-                        } label: {
-                            Text("Log out")
-                        }
-                        .foregroundColor(.white)
-                        .frame(width: 100, height: 50)
-                        .background(Color.green)
-                        .cornerRadius(10)
-                    .padding(.top, 30.0)
-                    }
-                    if !menuOpened {
-                    NavigationLink(destination: ContentView()
+                        })
                         .navigationBarTitle(Text("x"))
                         .navigationBarHidden(true))
                     {
-                        Image(systemName: "gobackward")
+                        HStack {
+                            Text("Log out")
+                            Image(systemName: "gobackward")
+                        }
                             .foregroundColor(Color.white)
                             .frame(width: 100, height: 50, alignment: .center)
                             .background(Color(.systemGreen))
-                            .cornerRadius(10)
+                            .cornerRadius(30)
                     }
                     .padding(.top, 30.0)
                     }
