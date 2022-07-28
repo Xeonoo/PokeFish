@@ -8,14 +8,17 @@
 import SwiftUI
 
 struct WeatherMainView: View {
-    
+    var weather: ResponseBody
+     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack(alignment: .leading) {
+            
+        }
     }
 }
 
 struct WeatherMainView_Previews: PreviewProvider {
     static var previews: some View {
-        WeatherMainView()
+        WeatherMainView(weather: previewWeather)
     }
 }

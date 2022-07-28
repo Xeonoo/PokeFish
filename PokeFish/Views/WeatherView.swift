@@ -16,11 +16,9 @@ struct WeatherView: View {
     var body: some View {
         NavigationView {
             VStack {
-                HStack {
                     if let location = locationManager.location {
                         if let weather = weather {
-//                            Text("Your cordinates are:\(location.longitude),\(location.latitude)")
-                            Text("Dziala")
+                            WeatherView(weather: weather)
                         } else {
                             LoadingView()
                                 .task {
@@ -50,7 +48,6 @@ struct WeatherView: View {
 //                    .frame(width: 100, height: 50)
 //                    .background(Color.green)
 //                    .cornerRadius(10)
-                }
             }
         }
     }
