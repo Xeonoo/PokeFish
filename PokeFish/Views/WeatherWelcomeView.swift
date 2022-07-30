@@ -16,6 +16,18 @@ struct WeatherWelcomeView: View {
             }
             .cornerRadius(30)
             .foregroundColor(Color.white)
+            .padding(.bottom)
+            NavigationLink(destination: MenuView()
+                .navigationBarTitle(Text("x"))
+                .navigationBarHidden(true))
+            {
+                Text("Menu")
+                Image(systemName: "house")
+            }
+            .foregroundColor(.white)
+            .frame(width: 100, height: 43)
+            .background(Color.blue)
+            .cornerRadius(30)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.green)

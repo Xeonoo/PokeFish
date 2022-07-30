@@ -146,7 +146,7 @@ struct MenuView: View {
                         .foregroundColor(Color.white)
                         .frame(width: 200, height: 50, alignment: .center)
                         .background(Color(.systemGreen))
-                        .cornerRadius(10)
+                        .cornerRadius(30)
                 }
 //                .padding(.top, 30.0)
                 .padding(.top, 370.0)
@@ -157,6 +157,21 @@ struct MenuView: View {
                     .navigationBarHidden(true))
                 {
                     Text("Fish")
+                        .bold()
+                        .foregroundColor(Color.white)
+                        .frame(width: 200, height: 50, alignment: .center)
+                        .background(Color(.systemGreen))
+                        .cornerRadius(30)
+                }
+                .padding(.top, 30.0)
+//                .padding(.top, 370.0)
+                }
+                if !menuOpened {
+                NavigationLink(destination: CalendarView()
+                    .navigationBarTitle(Text("x"))
+                    .navigationBarHidden(true))
+                {
+                    Text("Calendar")
                         .bold()
                         .foregroundColor(Color.white)
                         .frame(width: 200, height: 50, alignment: .center)

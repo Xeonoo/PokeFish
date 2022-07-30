@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		29082FE928958CAF00FC781A /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29082FE828958CAF00FC781A /* CalendarView.swift */; };
 		2920D75828882EC300F95CDA /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 2920D75728882EC300F95CDA /* FirebaseAuth */; };
 		2920D75A28882EC300F95CDA /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 2920D75928882EC300F95CDA /* FirebaseFirestore */; };
 		2920D75C28882FC600F95CDA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2920D75B28882FC600F95CDA /* GoogleService-Info.plist */; };
@@ -51,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		29082FE828958CAF00FC781A /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		2920D75B28882FC600F95CDA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2920D75D28883BFC00F95CDA /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		2920D76128883D3900F95CDA /* Fish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fish.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 				297629D72892898E00C7C290 /* LoadingView.swift */,
 				297629D928928E3B00C7C290 /* WeatherWelcomeView.swift */,
 				297629DD2892B74B00C7C290 /* WeatherMainView.swift */,
+				29082FE828958CAF00FC781A /* CalendarView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 			files = (
 				297EB77F288AAF69002F7053 /* MenuView.swift in Sources */,
 				296108F52875B758002FC736 /* ContentView.swift in Sources */,
+				29082FE928958CAF00FC781A /* CalendarView.swift in Sources */,
 				2920D7662888690800F95CDA /* NewFishView.swift in Sources */,
 				297629DA28928E3B00C7C290 /* WeatherWelcomeView.swift in Sources */,
 				297629D82892898E00C7C290 /* LoadingView.swift in Sources */,
